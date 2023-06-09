@@ -9,7 +9,7 @@ import codingImg from "../../public/images/coding_normal.svg";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [theme, setTheme] = useState("purple");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "blue");
   const data = [
     {
       title: "Landing Page Pepsi",
@@ -40,51 +40,21 @@ export default function Home() {
       web: "https://fashionsapp.herokuapp.com/",
     },
   ];
-  const imagesAbout = document.getElementById("social_img");
-  const links = document.getElementsByClassName("link");
-  const imageProyect = document.getElementById("img-modal");
-  const modal = document.getElementById("modal");
-  /* modal */
-  const nameModal = document.querySelector(".name");
-  const textModal = document.querySelector(".description");
-  const githubModal = document.querySelector("#github");
-  const webModal = document.querySelector("#web");
-  const themeStorage = localStorage.getItem("theme");
-  const linksStyle = document.getElementById("link-style") as HTMLLinkElement;
+
   useEffect(() => {
-    if (themeStorage) {
-      setTheme(themeStorage);
-      document.body.classList.add(themeStorage);
-    }
     document.body.classList.add(theme);
-
-    if (linksStyle) {
-      console.log(linksStyle, "linkstyle");
-
-      if (themeStorage == "light") {
-        linksStyle.href = "./dist/style.css";
-      }
-      if (themeStorage == "blue") {
-        linksStyle.href = "./dist/blue.css";
-      }
-      if (themeStorage == "green") {
-        linksStyle.href = "./dist/green.css";
-      }
-      if (themeStorage == "purple") {
-        linksStyle.href = "./dist/purple.css";
-      }
-    }
+    localStorage.setItem("theme", theme);
     return () => {
       document.body.classList.remove(theme);
     };
   }, [theme]);
   return (
-    <main>
+    <main className="relative">
       <section className="s1">
         <div className="main-container">
           <div className="greeting-wrapper">
-            <h1 className="my__name" data-text="Hola, yo soy Hector Paolo">
-              Hola, yo soy Hector Paolo
+            <h1 aria-label="Hola! yo soy developer">
+              Hola! Yo soy&nbsp;<span className="typewriter"></span>
             </h1>
           </div>
           <div className="into-wrapper">
@@ -168,8 +138,12 @@ export default function Home() {
             <div id="about-me" className="about-me">
               <h4>Mas sobre mi</h4>
               <p>
-                Soy de Cusco, Perú y desde pequeño me despertó la curiosidad el
-                internet y de como estaba construido todo.
+                Soy un desarrollador de software habilidoso con experiencia en
+                TypeScript y JavaScript, tengo conocimientos en frameworks como
+                React, Angular,NextJs y NestJs. Aprendo muy rápido y colaboro
+                estrechamente con los clientes para crear soluciones eficientes,
+                escalables y amigables para el usuario que resuelven problemas
+                del mundo real. ¡Trabajemos juntos para dar vida a tus ideas!
               </p>
               <p>
                 Me encanta programar y ver como de la nada puedes construir
