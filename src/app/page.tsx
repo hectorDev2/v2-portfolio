@@ -7,6 +7,8 @@ import project2 from "../../public/images/proyect0.jpg";
 import project3 from "../../public/images/proyect0.jpg";
 import codingImg from "../../public/images/coding_normal.svg";
 import { useEffect, useState } from "react";
+import Modal from "./components/Modal";
+import { FaGithub, FaInstagram } from "react-icons/fa";
 
 export default function Home() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "blue");
@@ -217,15 +219,19 @@ export default function Home() {
                 height={300}
               />
               <h3>Mis Redes:</h3>
-              <a target="_blank" href="https://github.com/darkp0lx">
-                <i className="fab fa-github"></i>: @HectorPaoloBarazorda
-              </a>
-              <br />
               <a
+                className="flex justify-center items-center"
+                target="_blank"
+                href="https://github.com/darkp0lx"
+              >
+                <FaGithub color={"var(--coverText)"} /> @HectorPaoloBarazorda
+              </a>
+              <a
+                className="flex justify-center items-center"
                 target="_blank"
                 href="https://www.instagram.com/hectorbarazorda/"
               >
-                <i className="fab fa-facebook"></i>: @HectorPaoloBarazorda
+                <FaInstagram color={"var(--coverText)"} /> @HectorPaoloBarazorda
               </a>
             </div>
           </div>
@@ -250,7 +256,7 @@ export default function Home() {
 
                   <div className="post-into">
                     <p>Una pagina web demostrativa y divertida.</p>
-                    <p className="link">ver mas</p>
+                    <Modal />
                   </div>
                 </div>
               </div>
@@ -273,7 +279,7 @@ export default function Home() {
                       quitar favoritos.Que nos muestra la info y podemos ver
                       peliculas online.
                     </p>
-                    <p className="link">ver mas</p>
+                    <Modal title="Disney Plus Clone" />
                   </div>
                 </div>
               </div>
@@ -295,7 +301,7 @@ export default function Home() {
                       Aplicación echa en react con login y favoritos conectada
                       con una Api(backend:firebase).
                     </p>
-                    <p className="link">ver mas</p>
+                    <Modal />
                   </div>
                 </div>
               </div>
@@ -316,57 +322,7 @@ export default function Home() {
                       Tienda virtual frontend:react y backend:nodeJs(login,
                       carro de compras y proceso de compra).
                     </p>
-                    <p className="link">ver más</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="modal" className="modal">
-              <div className="img-modal">
-                <Image
-                  id="img-modal"
-                  src={project1}
-                  alt=""
-                  width={300}
-                  height={200}
-                />
-                <div className="text-modal">
-                  <h2 className="name">Landing Page</h2>
-                  <p className="description">
-                    web para la converción de clientes, una web atractiva y
-                    dinámica <span style={{ fontSize: "40px" }}>&#129299;</span>
-                  </p>
-                  <div className="tecnologias">
-                    <h3>tecnologías :</h3>
-                    <ul className="list-tecnologias">
-                      <li>
-                        {" "}
-                        <i id="html" className="fab fa-html5"></i>HTML
-                      </li>
-                      <li>
-                        {" "}
-                        <i id="css" className="fab fa-css3-alt"></i>CSS
-                      </li>
-                      <li>
-                        <i id="javascript" className="fab fa-js-square"></i>
-                        Javascript
-                      </li>
-                      <li>
-                        <i className="fab fa-react"></i>React
-                      </li>
-                    </ul>
-                    <div className="botones">
-                      <a target="_black" id="github" href="">
-                        <button className="boton">
-                          <i className="fab fa-github"></i> ver código
-                        </button>
-                      </a>
-                      <a target="_black" id="web" href="">
-                        <button className="boton">
-                          <i className="fab fa-chrome"></i> ver pagina
-                        </button>
-                      </a>
-                    </div>
+                    <Modal />
                   </div>
                 </div>
               </div>

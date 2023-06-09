@@ -82,32 +82,36 @@ h1 {
 
   31.9070%,
   50.1395% {
-    content: "w";
+    content: "f";
   }
 
   33.0465%,
   49.0000% {
-    content: "wr";
+    content: "fr";
   }
 
   34.1860%,
   47.8605% {
-    content: "wri";
+    content: "fro";
   }
 
   35.3256%,
   46.7209% {
-    content: "writ";
+    content: "fron";
   }
 
   36.4651%,
   45.5814% {
-    content: "write";
+    content: "front";
   }
-
   37.6047%,
-  44.4419% {
-    content: "writer";
+    44.4419% {
+      content: "fronte";
+    }
+
+  38.6047%,
+  43.4419% {
+    content: "frontend";
   }
 
   54.6977%,
@@ -117,33 +121,39 @@ h1 {
 
   55.8372%,
   74.0698% {
-    content: "r";
+    content: "f";
   }
 
   56.9767%,
   72.9302% {
-    content: "re";
+    content: "fu";
   }
 
   58.1163%,
   71.7907% {
-    content: "rea";
+    content: "ful";
   }
 
   59.2558%,
   70.6512% {
-    content: "read";
+    content: "fullS";
   }
 
   60.3953%,
   69.5116% {
-    content: "reade";
+    content: "fullSt";
   }
 
   61.5349%,
   68.3721% {
-    content: "reader";
+    content: "fullStac";
+  
   }
+    62.5349%,
+    67.3721% {
+      content: "fullStack";
+  
+    }
 
   78.6279%,
   96.8605% {
@@ -152,29 +162,30 @@ h1 {
 
   79.7674%,
   95.7209% {
-    content: "h";
+    content: "b";
   }
 
   80.9070%,
   94.5814% {
-    content: "hu";
+    content: "ba";
   }
 
   82.0465%,
   93.4419% {
-    content: "hum";
+    content: "back";
   }
 
   83.1860%,
   92.3023% {
-    content: "huma";
+    content: "backe";
   }
 
   84.3256%,
   91.1628% {
-    content: "human";
+    content: "backend";
   }
 }
+
 @keyframes blink {
 
   0%,
@@ -184,6 +195,19 @@ h1 {
 
   50% {
     opacity: 0;
+  }
+}
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 125%;
+  }
+
+  100% {
+    width: 0;
   }
 }
 
@@ -200,75 +224,6 @@ h1 {
   content: "";
   border-right: 1px solid var(--caret);
   animation: blink 0.5s linear infinite;
-}
-
-.typewriter.thick::after {
-  border-right: 1ch solid var(--caret);
-}
-
-.typewriter.nocaret::after {
-  border-right: 0;
-}
-
-
-@media (prefers-reduced-motion) {
-  .typewriter::after {
-    animation: none;
-  }
-
-  @keyframes sequencePopup {
-
-    0%,
-    100% {
-      content: "developer";
-    }
-
-    25% {
-      content: "writer";
-    }
-
-    50% {
-      content: "reader";
-    }
-
-    75% {
-      content: "human";
-    }
-  }
-
-  .typewriter::before {
-    content: "developer";
-    animation: sequencePopup 12s linear infinite;
-  }
-}
-
-/**/
-@-webkit-keyframes type {
-  0% {
-    width: 0;
-  }
-
-  50% {
-    width: 125%;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes type {
-  0% {
-    width: 0;
-  }
-
-  50% {
-    width: 125%;
-  }
-
-  100% {
-    width: 0;
-  }
 }
 
 body * {
@@ -289,7 +244,7 @@ h4,
 h6,
 strong {
   color: var(--mainText);
-  font-family: 'Russo One', sans-serif;
+    font-family: 'Roboto Mono', monospace;
   font-weight: 500;
 }
 
@@ -316,7 +271,9 @@ textarea {
 a,
 i {
   text-decoration: none;
-  color: red;
+  color: var(--colorBorder);
+  text-shadow:2px var(--mainText);
+  font-weight: 600;
 }
 
 ul {
