@@ -24,7 +24,6 @@ h1 {
   margin: 1rem 0 1rem 2rem;
 }
 @keyframes typing {
-
   0.0000%,
   27.3488% {
     content: "";
@@ -184,6 +183,13 @@ h1 {
   91.1628% {
     content: "backend";
   }
+}
+
+.wrapper{
+  background-color: var(--secondaryColor);
+    border: 1px solid var(--colorBorder);
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
 
 @keyframes blink {
@@ -446,9 +452,10 @@ h6 {
   border: 2px solid var(--themeDotsBorder);
 }
 
-.into-wrapper .left-column :hover {
-  border-width: 5px;
+.into-wrapper .left-column .theme-dot:hover{
+  transform: scale(1.2);
 }
+
 
 .into-wrapper .left-column .theme-options-wrapper {
   display: -webkit-box;
@@ -502,7 +509,6 @@ h6 {
 .into-wrapper .right-column .preview {
   border: 2px solid #17a2b8;
   padding: 15px;
-  width: 300px;
   background-color: var(--previewBg);
   position: relative;
 }
@@ -541,6 +547,7 @@ h6 {
   border-radius: 10px;
 }
 
+
 .post-title {
   padding: 1em;
 }
@@ -550,8 +557,8 @@ h6 {
   display: grid;
   -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-top: 100px;
   gap: 100px;
 }
 
@@ -593,6 +600,9 @@ h6 {
   border: 1px solid var(--colorBorder);
   -webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
   box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+}
+.shadow{
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .portafolio {
@@ -839,6 +849,14 @@ h6 {
   }
 }
 
+.image-about {
+  width: 275px;
+  height: 275px;
+  background-image: url(../../public/images/coding_normal.svg);
+  background-size: auto;
+  margin:0 auto
+}
+
 /*# sourceMappingURL=style.css.map */
 body.green{
       --mainColor: #606b56;
@@ -851,6 +869,11 @@ body.green{
         --previewBg: rgb(81, 90, 72, 0.8);
         --previewShadow: #2a2f25;
         --buttonColor: #669966;
+        
+}
+
+body.green .image-about {
+  background-image: url(../../public/images/coding_green.svg);
 }
 
 body.blue{
@@ -865,6 +888,9 @@ body.blue{
       --previewShadow: #111921;
       --buttonColor: #17a2b8;
 }
+body.blue .image-about {
+  background-image: url(../../public/images/coding_blue.svg);
+}
 
 body.purple{
     --mainColor: #46344e;
@@ -877,4 +903,8 @@ body.purple{
       --previewBg: rgb(29, 21, 32, 0.8);
       --previewShadow: #2b202f;
       --buttonColor: #8534a3;
+}
+
+body.purple .image-about {
+  background-image: url(../../public/images/coding_purple.svg);
 }

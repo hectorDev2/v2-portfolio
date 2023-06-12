@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import peltrocheGym from "../../../public/images/peltroche-scroll.gif";
@@ -6,18 +7,12 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
 import { TbWorldWww } from "react-icons/tb";
 
-export default function Modal({
-  title = "Toogle translate",
-  project,
-}: {
-  title?: string;
-  project?: any;
-}) {
+export default function Modal({ project }: { project?: any }) {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
       <button
-        className="bg-[var(--previewShadow)] hover:bg-[#8f649f] text-white font-bold py-2 px-4 border-b-4 border-[var(--mainText)] hover:border-[[var(--previewShadow)] rounded"
+        className="shadow bg-[var(--previewShadow)] hover:bg-[var(--secondaryColor)] text-white font-bold py-2 px-4 border-b-4 border-[var(--mainText)] hover:border-[[var(--previewShadow)] rounded"
         type="button"
         onClick={() => setShowModal(true)}
       >
@@ -25,14 +20,14 @@ export default function Modal({
       </button>
       {showModal ? (
         <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+          <div className="justify-center transform- items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto max-w-3xl min-w-[12rem]">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex  items-start justify-between px-5 md:p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text:2xl md:text-3xl text-[var(--mainColor)] font-semibold">
-                    {title}
+                    {project.title}
                   </h3>
                   <button
                     className="p-1 ml-auto  border-0  float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -98,7 +93,7 @@ export default function Modal({
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <div className="opacity-[0.7] fixed inset-0 z-40 bg-black"></div>
         </>
       ) : null}
     </>
