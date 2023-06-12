@@ -8,8 +8,8 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { experiences } from "@/store/data";
 import { textVariant } from "@/utils";
+import { experiences } from "@/store/data";
 
 const ExperienceCard = ({ experience }: any) => {
   return (

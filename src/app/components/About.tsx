@@ -1,7 +1,10 @@
 import React from "react";
-import { FaGithub, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { AiFillHtml5 } from "react-icons/ai";
 import { FaCss3Alt, FaReact, FaAngular } from "react-icons/fa";
+import downloadGif from "../../../public/images/gifs/download.gif";
+import Image from "next/image";
+
 import {
   SiExpress,
   SiJavascript,
@@ -11,6 +14,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { BsGit, BsGithub } from "react-icons/bs";
+import Link from "next/link";
 
 export const About = () => (
   <section className="s2">
@@ -35,7 +39,7 @@ export const About = () => (
           <h4>SKILLS</h4>
           <p>
             Desarrollador Frontend React{" "}
-            <a target="_blank" href="/public/images/cv.pdf">
+            <a target="_blank" href="/cv.pdf" rel="noopener noreferrer">
               Descargar CV
             </a>
           </p>
@@ -97,20 +101,29 @@ export const About = () => (
         <div className="social-links">
           <div className="image-about"></div>
           <h3>Mis Redes:</h3>
-          <a
-            className="flex justify-center items-center"
-            target="_blank"
-            href="https://github.com/darkp0lx"
-          >
-            <FaGithub color={"var(--coverText)"} /> @HectorPaoloBarazorda
-          </a>
-          <a
-            className="flex justify-center items-center"
-            target="_blank"
-            href="https://www.instagram.com/hectorbarazorda/"
-          >
-            <FaInstagram color={"var(--coverText)"} /> @HectorPaoloBarazorda
-          </a>
+          <div className="flex justify-center gap-5 ">
+            <Link
+              className="flex justify-center items-center hover:scale-105 hover:text-[#0e76a8]"
+              target="_blank"
+              href="https://github.com/darkp0lx"
+            >
+              <FaGithub size={45} color={"var(--coverText)"} />
+            </Link>
+            <Link
+              className="flex justify-center items-center hover:scale-105 "
+              target="_blank"
+              href="https://www.instagram.com/hectorbarazorda/"
+            >
+              <FaInstagram size={45} color={"var(--coverText)"} />
+            </Link>
+            <Link
+              className="flex justify-center items-center hover:scale-105 "
+              target="_blank"
+              href="https://www.linkedin.com/in/barazorda-paolo/"
+            >
+              <FaLinkedin size={45} color={"var(--coverText)"} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

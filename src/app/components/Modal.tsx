@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import peltrocheGym from "../../../public/images/peltroche-scroll.gif";
 import { FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
 import { TbWorldWww } from "react-icons/tb";
+import Link from "next/link";
 
 export default function Modal({ project }: { project?: any }) {
   const [showModal, setShowModal] = useState(false);
@@ -41,15 +41,11 @@ export default function Modal({ project }: { project?: any }) {
                 {/*body*/}
                 <div className="relative justify-center flex-wrap px-5 md:p-5 flex">
                   <p className="my-2 md:my-4 text-slate-500 text-sm  md:text-md leading-relaxed px-3">
-                    permite a los usuarios escribir texto en un idioma y
-                    traducirlo a otro idioma seleccionado. Además, la aplicación
-                    tiene la funcionalidad de reproducir la pronunciación de la
-                    traducción para que los usuarios puedan escuchar cómo se
-                    pronuncia la traducción.
+                    {project.text}
                   </p>
                   <Image
                     style={{ boxShadow: "0px 0px 5px #000000" }}
-                    src={peltrocheGym}
+                    src={project.gif}
                     alt="scroll page peltroche"
                     width={300}
                   />
@@ -73,22 +69,28 @@ export default function Modal({ project }: { project?: any }) {
                   </div>
                 </div>
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                  <button
-                    className="w-full flex gap-4 justify-center items-center  text-slate-800 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <AiFillGithub size={32} />
-                    ver codigo
-                  </button>
-                  <button
-                    className="flex w-full items-center gap-4 justify-center bg-[var(--mainColor)] text-white active:bg-[var(--secondaryColor)] font-bold uppercase text-sm px-2 md:px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <TbWorldWww size={32} />
-                    <span className="text-2xs md:text-base">ver sitio</span>
-                  </button>
+                  <Link href={project.code} target="_blank">
+                    <button
+                      className="w-full flex gap-4 justify-center items-center  text-slate-800 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                      onClick={() => setShowModal(false)}
+                    >
+                      <AiFillGithub size={32} />
+                      ver codigo
+                    </button>
+                  </Link>
+                  <Link href={project.web} target="_blank">
+                    <button
+                      className="flex w-full items-center gap-4 justify-center bg-[var(--mainColor)] text-white active:bg-[var(--secondaryColor)] font-bold uppercase text-sm px-2 md:px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                      onClick={() => setShowModal(false)}
+                    >
+                      <TbWorldWww size={32} />
+                      <Link href={project.web}>
+                        <span className="text-2xs md:text-base">ver sitio</span>
+                      </Link>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
