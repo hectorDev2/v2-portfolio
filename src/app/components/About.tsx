@@ -1,7 +1,16 @@
 import React from "react";
-import Image from "next/image";
 import { FaGithub, FaInstagram } from "react-icons/fa";
-import codingImg from "../../../public/images/coding_normal.svg";
+import { AiFillHtml5 } from "react-icons/ai";
+import { FaCss3Alt, FaReact, FaAngular } from "react-icons/fa";
+import {
+  SiExpress,
+  SiJavascript,
+  SiNestjs,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+import { BsGit, BsGithub } from "react-icons/bs";
 
 export const About = () => (
   <section className="s2">
@@ -26,56 +35,62 @@ export const About = () => (
           <h4>SKILLS</h4>
           <p>
             Desarrollador Frontend React{" "}
-            <a target="_blank" href="cv.pdf">
+            <a target="_blank" href="/public/images/cv.pdf">
               Descargar CV
             </a>
           </p>
           <div id="skills" className="py-4">
             <ul className="list-1">
-              <li>
-                <span>
-                  <i className="fab fa-html5"></i>
-                </span>
+              <li className="flex justify-left  gap-2 items-center">
+                <AiFillHtml5 />
                 HTML
               </li>
-              <li>
-                <span>
-                  <i className="fab fa-css3-alt"></i>
-                </span>
+              <li className="flex justify-left  gap-2 items-center">
+                <FaCss3Alt />
                 CSS
               </li>
-              <li>
-                <span>
-                  <i className="fab fa-js-square"></i>
-                </span>
+              <li className="flex justify-left  gap-2 items-center">
+                <SiJavascript />
                 JavaScript
               </li>
-              <li>
-                <span>
-                  <i className="fab fa-react"></i>
-                </span>
+              <li className="flex justify-left  gap-2 items-center">
+                <FaReact />
                 React
               </li>
-              <li>
-                <span>
-                  <i className="fab fa-battle-net"></i>
-                </span>
+              <li className="flex justify-left  gap-2  items-center">
+                <SiNextdotjs />
                 NextJS
               </li>
-              <li>
-                <span>
-                  <i className="fab fa-git-square"></i>
-                </span>
+              <li className="flex justify-left gap-2 items-center">
+                <BsGit />
                 git
               </li>
             </ul>
-            <ul>
-              <li>git</li>
-              <li>Redux</li>
-              <li>API REST</li>
-              <li>BOOTSTRAP</li>
-              <li>Node Js</li>
-              <li>responsive Design</li>
+            <ul className="list-2">
+              <li className="flex justify-left  gap-2 items-center">
+                <FaAngular />
+                Angular
+              </li>
+              <li className="flex justify-left  gap-2 items-center">
+                <SiTailwindcss />
+                Tailwind css
+              </li>
+              <li className="flex justify-left  gap-2 items-center">
+                <SiTypescript />
+                Typescript
+              </li>
+              <li className="flex justify-left  gap-2 items-center">
+                <SiNestjs />
+                Nest
+              </li>
+              <li className="flex justify-left  gap-2  items-center">
+                <SiExpress />
+                Express
+              </li>
+              <li className="flex justify-left gap-2 items-center">
+                <BsGithub />
+                github
+              </li>
             </ul>
           </div>
         </div>

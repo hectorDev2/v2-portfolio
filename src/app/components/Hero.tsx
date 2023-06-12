@@ -1,6 +1,5 @@
 import Image from "next/image";
 import perfil from "../../../public/images/perfil.jpg";
-import Example from "./Example";
 import { SectionTheme } from "./SectionTheme";
 
 export const Hero = () => {

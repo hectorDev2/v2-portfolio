@@ -8,7 +8,7 @@ export const Projects = () => {
         <h3 className="text-center py-2">Algunos de mis proyectos!</h3>
         <div className="post-wrapper">
           {projects.map((project) => (
-            <ItemProject project={project} />
+            <ItemProject key={project.title} project={project} />
           ))}
         </div>
       </div>

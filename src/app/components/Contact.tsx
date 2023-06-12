@@ -18,9 +18,10 @@ export const Contact = () => {
           <input type="email" name="email" className="input-field" />
           <label htmlFor="">Mensaje</label>
           <textarea name="message" className="input-field"></textarea>
-          <input type="submit" value="enviar" id="submit-btn" />
+          <button className="bg-[var(--previewShadow)] text-[#fff] font-bold py-2 px-4 rounded w-full">
+            enviar
+          </button>
         </form>
-        <div className="estatus" id="status"></div>
       </div>
     </section>
   );
