@@ -20,7 +20,7 @@ const projects = [
     text: "Web app para la gestión de la prueba de fisiología de la peltroche.",
     tec: ["css", "html", "javascript"],
     code: "https://github.com/hectorDev2/peltroche",
-    web: "https://github.com/hectorDev2/peltroche",
+    web: "https://peltroche.vercel.app/",
     gif: gifPeltroche,
     mainImage: peltrocheImg,
   },
