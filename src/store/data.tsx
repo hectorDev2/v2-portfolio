@@ -15,15 +15,15 @@ import logoAwto from "../../public/images/logo_awto.png";
 import { SiRedux } from "react-icons/si";
 
 const projects = [
-  {
-    title: "Gym Peltroche",
-    text: "Web app para la gestión de la prueba de fisiología de la peltroche.",
-    tec: ["css", "html", "javascript"],
-    code: "https://github.com/hectorDev2/peltroche",
-    web: "https://peltroche.vercel.app/",
-    gif: gifPeltroche,
-    mainImage: peltrocheImg,
-  },
+  // {
+  //   title: "Gym Peltroche",
+  //   text: "Web app para la gestión de la prueba de fisiología de la peltroche.",
+  //   tec: ["css", "html", "javascript"],
+  //   code: "https://github.com/hectorDev2/peltroche",
+  //   web: "https://peltroche.vercel.app/",
+  //   gif: gifPeltroche,
+  //   mainImage: peltrocheImg,
+  // },
   {
     title: "Bike Volt",
     text: "Aplicación web, para mostrar la identidad y productos de Bike Volt",
