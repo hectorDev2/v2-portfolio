@@ -12,18 +12,21 @@ import { DiMongodb } from "react-icons/di";
 import { SiNextdotjs, SiNestjs } from "react-icons/si";
 
 import logoAwto from "../../public/images/logo_awto.png";
+import logoEnova from "../../public/images/enova-log.png";
+import logoDigenio from "../../public/images/digenio-logo.svg";
+
 import { SiRedux } from "react-icons/si";
 
 const projects = [
-  // {
-  //   title: "Gym Peltroche",
-  //   text: "Web app para la gestión de la prueba de fisiología de la peltroche.",
-  //   tec: ["css", "html", "javascript"],
-  //   code: "https://github.com/hectorDev2/peltroche",
-  //   web: "https://peltroche.vercel.app/",
-  //   gif: gifPeltroche,
-  //   mainImage: peltrocheImg,
-  // },
+  {
+    title: "Gym Peltroche",
+    text: "Web app del gym Peltroche de la ciudad del cusco",
+    tec: ["css", "html", "javascript", "React", "NextJS"],
+    code: "https://github.com/hectorDev2/peltroche",
+    web: "https://peltroche.vercel.app/",
+    gif: gifPeltroche,
+    mainImage: peltrocheImg,
+  },
   {
     title: "Bike Volt",
     text: "Aplicación web, para mostrar la identidad y productos de Bike Volt",
@@ -59,7 +62,7 @@ const experiences = [
     company_name: "Digenio",
     description:
       "Digenio es una empresa local que hace pequeñas aplicaciones web para empresas PYMES.",
-    icon: logoAwto,
+    icon: logoDigenio,
     iconBg: "#383E56",
     date: "Mayo 2021 - Diciembre 2021",
     points: [
@@ -84,7 +87,7 @@ const experiences = [
     company_name: "Enova",
     description:
       "Enova es una empresa que hace tiendas online para empresas de Peru y Latinoamerica.",
-    icon: logoAwto,
+    icon: logoEnova,
     iconBg: "#E6DEDD",
     date: "Mayo 2021 - Febrero 2022",
     points: [
