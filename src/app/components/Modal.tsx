@@ -20,12 +20,16 @@ export default function Modal({ project }: { project?: any }) {
       </button>
       {showModal ? (
         <>
-          <div className="justify-center transform- items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+          <div
+            className={`transform ${showModal ? "scale-100" : "scale-0"} 
+            transition-transform duration-300
+            justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none`}
+          >
             <div className="relative w-auto my-6 mx-auto max-w-3xl min-w-[12rem]">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex  items-start justify-between px-5 md:p-5 border-b border-solid border-slate-200 rounded-t">
+                <div className="flex f  items-start justify-between px-5 md:p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text:2xl md:text-3xl text-[var(--mainColor)] font-semibold">
                     {project.title}
                   </h3>
@@ -39,7 +43,7 @@ export default function Modal({ project }: { project?: any }) {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative justify-center flex-wrap px-5 md:p-5 flex">
+                <div className="relative flex-col justify-center flex-wrap px-5 md:p-5 flex">
                   <p className="my-2 md:my-4 text-slate-500 text-sm  md:text-md leading-relaxed px-3">
                     {project.text}
                   </p>
@@ -48,6 +52,7 @@ export default function Modal({ project }: { project?: any }) {
                     src={project.gif}
                     alt="scroll page peltroche"
                     width={300}
+                    className="mx-auto"
                   />
                 </div>
                 {/*footer*/}

@@ -663,13 +663,6 @@ h6 {
   color: #fff;
 }
 
-#modal .name,
-#modal p,
-#modal h3,
-#modal .boton,
-#modal ul li {
-  color: white;
-}
 
 .modal {
   -webkit-transition: .4s ease-in;
