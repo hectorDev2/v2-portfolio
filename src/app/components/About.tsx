@@ -105,7 +105,7 @@ export const About = () => (
             <Link
               className="flex justify-center items-center hover:scale-105 hover:text-[#0e76a8]"
               target="_blank"
-              href="https://github.com/darkp0lx"
+              href="https://github.com/hectorDev2"
             >
               <FaGithub size={45} color={"var(--coverText)"} />
             </Link>
