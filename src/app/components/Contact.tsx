@@ -12,7 +12,7 @@ export const Contact = () => {
   const message = useField({ type: "email" });
   const cv = useField({ type: "file" });
 
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = async (e: React.SyntheticEvent) => {
     const templateParams = {
