@@ -52,8 +52,6 @@ export const Contact = () => {
         <form onSubmit={handleSubmit} id="contact-form">
           <label htmlFor="">Nombre</label>
           <input name="name" {...name} className="input-field" />
-          <label htmlFor="">Asunto</label>
-          <input type="text" name="asunto" className="input-field" />
           <label htmlFor="">Email</label>
           <input {...email} name="email" className="input-field" />
           <label htmlFor="">Mensaje</label>
